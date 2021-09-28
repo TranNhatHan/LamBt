@@ -1,0 +1,1 @@
+print("Xin chào thầy và các bạn")
