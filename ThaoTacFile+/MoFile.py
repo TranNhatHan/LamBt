@@ -1,0 +1,13 @@
+import pickle
+pickle_in1 = open("list1.pickle","rb")
+per = pickle.load(pickle_in1)
+print(per)
+pickle_in1.close()
+pickle_in2 = open("list2.pickle","rb")
+stu = pickle.load(pickle_in2)
+print(stu)
+pickle_in2.close()
+pickle_in3 = open("list3.pickle","rb")
+pro = pickle.load(pickle_in3)
+print(pro)
+pickle_in3.close()
