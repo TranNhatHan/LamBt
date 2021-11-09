@@ -1,8 +1,0 @@
-name = input("Nhap ten file:")
-text = input("Nhap chuoi:")
-f = open("C:\Thu_muc_moi\Tao_file_bang_python\{}".format(name), "a")
-f.write(text)
-f.close()
-f = open("C:\Thu_muc_moi\Tao_file_bang_python\{}".format(name),"r")
-print(f.read())
-f.close()
