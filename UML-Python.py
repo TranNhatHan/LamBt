@@ -1,10 +1,10 @@
-class Customer:
+class Customer(object):
 
     def __init__(self,name:str,address):
         self.name = name
         self.address = address
 
-class Order:
+class Order(object):
 
     def __init__(self,date,status:str):
         self.date = date
@@ -22,7 +22,7 @@ class Order:
     def calcTotalWeight(self):
         pass
 
-class OrderDetail:
+class OrderDetail(object):
 
     def __init__(self,quantity:int,taxStatus:str):
         self.quantity = quantity
@@ -36,7 +36,7 @@ class OrderDetail:
 
     def calcTax(self):
         pass
-class Item:
+class Item(object):
 
     def __init__(self,shippingWeight,description:str):
         self.shippingWeight = shippingWeight
@@ -51,7 +51,7 @@ class Item:
     def inStock(self):
         pass
 
-class Payment:
+class Payment(object):
 
     def __init__(self,amount:float):
         self.amount=amount
