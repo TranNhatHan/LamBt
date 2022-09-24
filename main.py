@@ -39,7 +39,7 @@ def make_tf_idf_matrix(*f):
         for j in i:
             temp.append(tf_idf(j, i, f))
         m.append(temp)
-    return np.array(m)
+    return np.array(m, dtype=object)
 
 
 
@@ -53,4 +53,3 @@ if __name__ == "__main__":
     fregs4 = read_text_file("corpus-tf-idf/tieng Anh/vb04.txt")
     fregs5 = read_text_file("corpus-tf-idf/tieng Anh/vb05.txt")
     print(make_tf_idf_matrix(fregs1, fregs2, fregs3, fregs4, fregs5))
-
