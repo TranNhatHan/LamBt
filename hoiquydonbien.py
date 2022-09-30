@@ -2,6 +2,13 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import SGDRegressor
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
+from sklearn.linear_model import Ridge
+
+
 def readData(filename, folder = ""):
     dt = np.loadtxt(os.path.join(folder, filename), delimiter=",")
     X, y = dt[:, 0], dt[:, 1]
@@ -28,6 +35,13 @@ def main():
     print("Giá trị vector trọng số tối ưu tìm được theo thuật toán Gradient Descent - w_optimal:", w)
     print("List chứa tất cả các giá trị của hàm mất mát tương ứng với các giá trị vector trọng số tại mỗi bước lặp:", ll)
 
+def mainsklearn():
+    dt = np.loadtxt("ex1data1.txt", delimiter=",")
+    X, y = dt[:, 0], dt[:, 1]
+    reg = LinearRegression()
+    reg.fit(X.reshape(-1, 1), y)
+    print(reg.coef_[0], reg.intercept_)
+
 if __name__ == "__main__":
-    main()
+    mainsklearn()
     # [-3.63029144  1.16636235]
